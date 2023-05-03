@@ -1,15 +1,18 @@
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\HotelCetafet.exe.config
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\HotelCetafet.exe
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\HotelCetafet.pdb
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.csprojResolveAssemblyReference.cache
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.FrmPrincipal.resources
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.Properties.Resources.resources
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.csproj.GenerateResource.Cache
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.exe
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.pdb
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.View.FrmCliente.resources
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\EntityFramework.dll
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\EntityFramework.SqlServer.dll
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\EntityFramework.xml
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\EntityFramework.SqlServer.xml
-c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.View.FrmPais.resources
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\bin\Debug\HotelCetafet.exe.config
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\bin\Debug\HotelCetafet.exe
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\bin\Debug\HotelCetafet.pdb
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\bin\Debug\EntityFramework.dll
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\bin\Debug\EntityFramework.xml
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.csproj.AssemblyReference.cache
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.csproj.SuggestedBindingRedirects.cache
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.View.FrmCliente.resources
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.View.FrmPais.resources
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.FrmPrincipal.resources
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.Properties.Resources.resources
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.csproj.GenerateResource.cache
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.csproj.CoreCompileInputs.cache
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.csproj.CopyComplete
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.exe
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.pdb

@@ -1,0 +1,8 @@
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\Refatoracao_\obj\Debug\Refatoracao_.csproj.AssemblyReference.cache
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\Refatoracao_\obj\Debug\Refatoracao_.csproj.SuggestedBindingRedirects.cache
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\Refatoracao_\obj\Debug\Refatoracao_.csproj.CoreCompileInputs.cache
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\Refatoracao_\bin\Debug\Refatoracao_.exe.config
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\Refatoracao_\bin\Debug\Refatoracao_.exe
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\Refatoracao_\bin\Debug\Refatoracao_.pdb
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\Refatoracao_\obj\Debug\Refatoracao_.exe
+C:\Users\android\Documents\GitHub\WorldSkillsTeste\Refatoracao_\obj\Debug\Refatoracao_.pdb

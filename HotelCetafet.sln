@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelCetafet", "HotelCetafet\HotelCetafet.csproj", "{2251D3C9-2116-4986-AEDA-4172A1ACC037}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Refatoração e teste unitário", "Refatoração e teste unitário", "{9D541EB0-0888-4CEC-849A-FBB38FC95273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefatoracaoTeste", "RefatoracaoTeste\RefatoracaoTeste.csproj", "{F5C9CED5-A1BD-465E-AF7F-A69367C3F64E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refatoracao_", "Refatoracao_\Refatoracao_.csproj", "{B9C0E5B3-DA78-4167-926E-D64EC9BC30C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +21,23 @@ Global
 		{2251D3C9-2116-4986-AEDA-4172A1ACC037}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2251D3C9-2116-4986-AEDA-4172A1ACC037}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2251D3C9-2116-4986-AEDA-4172A1ACC037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C9CED5-A1BD-465E-AF7F-A69367C3F64E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C9CED5-A1BD-465E-AF7F-A69367C3F64E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C9CED5-A1BD-465E-AF7F-A69367C3F64E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C9CED5-A1BD-465E-AF7F-A69367C3F64E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9C0E5B3-DA78-4167-926E-D64EC9BC30C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C0E5B3-DA78-4167-926E-D64EC9BC30C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9C0E5B3-DA78-4167-926E-D64EC9BC30C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9C0E5B3-DA78-4167-926E-D64EC9BC30C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F5C9CED5-A1BD-465E-AF7F-A69367C3F64E} = {9D541EB0-0888-4CEC-849A-FBB38FC95273}
+		{B9C0E5B3-DA78-4167-926E-D64EC9BC30C1} = {9D541EB0-0888-4CEC-849A-FBB38FC95273}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {737629EA-0E8C-4762-A55A-1BF905A7E6C0}
 	EndGlobalSection
 EndGlobal
