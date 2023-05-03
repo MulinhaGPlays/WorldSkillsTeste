@@ -60,6 +60,7 @@
     <Compile Include="Modelo\Cliente.cs">
       <DependentUpon>ModelHotelCetafest.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\ClienteDAL.cs" />
     <Compile Include="Modelo\ModelHotelCetafest.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,6 +83,7 @@
     <Compile Include="Modelo\Profissao.cs">
       <DependentUpon>ModelHotelCetafest.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\ProfissaoDAL.cs" />
     <Compile Include="View\FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +104,12 @@
     <Compile Include="View\FrmPais.Designer.cs">
       <DependentUpon>FrmPais.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmProfissao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmProfissao.Designer.cs">
+      <DependentUpon>FrmProfissao.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +128,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FrmProfissao.resx">
+      <DependentUpon>FrmProfissao.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Modelo\ModelHotelCetafest.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelHotelCetafest.Designer.cs</LastGenOutput>
@@ -150,6 +161,7 @@
       <DependentUpon>ModelHotelCetafest.edmx</DependentUpon>
       <LastGenOutput>ModelHotelCetafest.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Modelo\ModelHotelCetafest.edmx.sql" />
     <Content Include="Modelo\ModelHotelCetafest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelHotelCetafest.edmx</DependentUpon>

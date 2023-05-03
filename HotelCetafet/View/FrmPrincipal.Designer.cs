@@ -33,6 +33,7 @@
             this.funçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.profissãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,8 @@
             // 
             this.funçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem,
-            this.paisToolStripMenuItem});
+            this.paisToolStripMenuItem,
+            this.profissãoToolStripMenuItem});
             this.funçõesToolStripMenuItem.Name = "funçõesToolStripMenuItem";
             this.funçõesToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.funçõesToolStripMenuItem.Text = "Funções";
@@ -65,16 +67,23 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // paisToolStripMenuItem
             // 
             this.paisToolStripMenuItem.Name = "paisToolStripMenuItem";
-            this.paisToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.paisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.paisToolStripMenuItem.Text = "Pais";
             this.paisToolStripMenuItem.Click += new System.EventHandler(this.paisToolStripMenuItem_Click);
+            // 
+            // profissãoToolStripMenuItem
+            // 
+            this.profissãoToolStripMenuItem.Name = "profissãoToolStripMenuItem";
+            this.profissãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.profissãoToolStripMenuItem.Text = "Profissão";
+            this.profissãoToolStripMenuItem.Click += new System.EventHandler(this.profissãoToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -101,6 +110,7 @@
         private System.Windows.Forms.ToolStripMenuItem funçõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem profissãoToolStripMenuItem;
     }
 }
 

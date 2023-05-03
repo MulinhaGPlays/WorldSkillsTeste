@@ -18,7 +18,6 @@ namespace HotelCetafet.Modelo
         public bdHotelCetafestConexao()
             : base("name=bdHotelCetafestConexao")
         {
-            Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

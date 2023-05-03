@@ -4,82 +4,81 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="bdHotelCetafestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Cliente">
-          <Key>
-            <PropertyRef Name="codigo" />
-          </Key>
-          <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="codigoPais" Type="int" Nullable="false" />
-          <Property Name="codigoProfissao" Type="int" Nullable="false" />
-          <Property Name="nome" Type="varchar" MaxLength="100" />
-          <Property Name="Rua" Type="varchar" MaxLength="100" />
-          <Property Name="bairro" Type="varchar" MaxLength="100" />
-          <Property Name="cep" Type="varchar" MaxLength="10" />
-          <Property Name="NumeroCasa" Type="int" />
-          <Property Name="TipoDocumento" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="NumeroDocumento" Type="varchar" MaxLength="50" />
-          <Property Name="TipoPessoa" Type="bit" Nullable="false" />
-          <Property Name="Sexo" Type="char" MaxLength="1" />
-          <Property Name="DataNascimento" Type="smalldatetime" />
-          <Property Name="Telefone" Type="varchar" MaxLength="10" />
-          <Property Name="Celular" Type="varchar" MaxLength="10" />
-        </EntityType>
-        <EntityType Name="Pais">
-          <Key>
-            <PropertyRef Name="codigo" />
-          </Key>
-          <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nome" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="sigla" Type="char" MaxLength="3" />
-          <Property Name="Populacao" Type="int" />
-        </EntityType>
-        <EntityType Name="Profissao">
-          <Key>
-            <PropertyRef Name="codigo" />
-          </Key>
-          <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="descricao" Type="varchar" MaxLength="100" Nullable="false" />
-        </EntityType>
-        <Association Name="fk_clientePais">
-          <End Role="Pais" Type="Self.Pais" Multiplicity="1" />
-          <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pais">
-              <PropertyRef Name="codigo" />
-            </Principal>
-            <Dependent Role="Cliente">
-              <PropertyRef Name="codigoPais" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_clienteProfissao">
-          <End Role="Profissao" Type="Self.Profissao" Multiplicity="1" />
-          <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Profissao">
-              <PropertyRef Name="codigo" />
-            </Principal>
-            <Dependent Role="Cliente">
-              <PropertyRef Name="codigoProfissao" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="bdHotelCetafestModelStoreContainer">
-          <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Pais" EntityType="Self.Pais" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Profissao" EntityType="Self.Profissao" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="fk_clientePais" Association="Self.fk_clientePais">
-            <End Role="Pais" EntitySet="Pais" />
-            <End Role="Cliente" EntitySet="Cliente" />
-          </AssociationSet>
-          <AssociationSet Name="fk_clienteProfissao" Association="Self.fk_clienteProfissao">
-            <End Role="Profissao" EntitySet="Profissao" />
-            <End Role="Cliente" EntitySet="Cliente" />
-          </AssociationSet>
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="bdHotelCetafestModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="bdHotelCetafestModelStoreContainer">
+    <EntitySet Name="Cliente" EntityType="bdHotelCetafestModel.Store.Cliente" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pais" EntityType="bdHotelCetafestModel.Store.Pais" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Profissao" EntityType="bdHotelCetafestModel.Store.Profissao" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="fk_clientePais" Association="bdHotelCetafestModel.Store.fk_clientePais">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="fk_clienteProfissao" Association="bdHotelCetafestModel.Store.fk_clienteProfissao">
+      <End Role="Profissao" EntitySet="Profissao" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigoPais" Type="int" Nullable="false" />
+    <Property Name="codigoProfissao" Type="int" Nullable="false" />
+    <Property Name="nome" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="Rua" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="bairro" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="cep" Type="varchar" Nullable="true" MaxLength="10" />
+    <Property Name="NumeroCasa" Type="int" Nullable="true" />
+    <Property Name="TipoDocumento" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="NumeroDocumento" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="TipoPessoa" Type="bit" Nullable="false" />
+    <Property Name="Sexo" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="DataNascimento" Type="datetime" Nullable="true" />
+    <Property Name="Telefone" Type="varchar" Nullable="true" MaxLength="10" />
+    <Property Name="Celular" Type="varchar" Nullable="true" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Pais">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="sigla" Type="char" Nullable="true" MaxLength="3" />
+    <Property Name="Populacao" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Profissao">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <Association Name="fk_clientePais">
+    <End Role="Pais" Type="bdHotelCetafestModel.Store.Pais" Multiplicity="1" />
+    <End Role="Cliente" Type="bdHotelCetafestModel.Store.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="codigoPais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_clienteProfissao">
+    <End Role="Profissao" Type="bdHotelCetafestModel.Store.Profissao" Multiplicity="1" />
+    <End Role="Cliente" Type="bdHotelCetafestModel.Store.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profissao">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="codigoProfissao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="bdHotelCetafestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -164,50 +163,49 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="bdHotelCetafestModelStoreContainer" CdmEntityContainer="bdHotelCetafestConexao">
-          <EntitySetMapping Name="Cliente">
-            <EntityTypeMapping TypeName="bdHotelCetafestModel.Cliente">
-              <MappingFragment StoreEntitySet="Cliente">
-                <ScalarProperty Name="codigo" ColumnName="codigo" />
-                <ScalarProperty Name="codigoPais" ColumnName="codigoPais" />
-                <ScalarProperty Name="codigoProfissao" ColumnName="codigoProfissao" />
-                <ScalarProperty Name="nome" ColumnName="nome" />
-                <ScalarProperty Name="Rua" ColumnName="Rua" />
-                <ScalarProperty Name="bairro" ColumnName="bairro" />
-                <ScalarProperty Name="cep" ColumnName="cep" />
-                <ScalarProperty Name="NumeroCasa" ColumnName="NumeroCasa" />
-                <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
-                <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
-                <ScalarProperty Name="TipoPessoa" ColumnName="TipoPessoa" />
-                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
-                <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
-                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
-                <ScalarProperty Name="Celular" ColumnName="Celular" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Pais">
-            <EntityTypeMapping TypeName="bdHotelCetafestModel.Pais">
-              <MappingFragment StoreEntitySet="Pais">
-                <ScalarProperty Name="codigo" ColumnName="codigo" />
-                <ScalarProperty Name="nome" ColumnName="nome" />
-                <ScalarProperty Name="sigla" ColumnName="sigla" />
-                <ScalarProperty Name="Populacao" ColumnName="Populacao" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Profissao">
-            <EntityTypeMapping TypeName="bdHotelCetafestModel.Profissao">
-              <MappingFragment StoreEntitySet="Profissao">
-                <ScalarProperty Name="codigo" ColumnName="codigo" />
-                <ScalarProperty Name="descricao" ColumnName="descricao" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdHotelCetafestModelStoreContainer" CdmEntityContainer="bdHotelCetafestConexao">
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="IsTypeOf(bdHotelCetafestModel.Cliente)">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="codigoPais" ColumnName="codigoPais" />
+          <ScalarProperty Name="codigoProfissao" ColumnName="codigoProfissao" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="Rua" ColumnName="Rua" />
+          <ScalarProperty Name="bairro" ColumnName="bairro" />
+          <ScalarProperty Name="cep" ColumnName="cep" />
+          <ScalarProperty Name="NumeroCasa" ColumnName="NumeroCasa" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+          <ScalarProperty Name="TipoPessoa" ColumnName="TipoPessoa" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pais">
+      <EntityTypeMapping TypeName="IsTypeOf(bdHotelCetafestModel.Pais)">
+        <MappingFragment StoreEntitySet="Pais">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="sigla" ColumnName="sigla" />
+          <ScalarProperty Name="Populacao" ColumnName="Populacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profissao">
+      <EntityTypeMapping TypeName="IsTypeOf(bdHotelCetafestModel.Profissao)">
+        <MappingFragment StoreEntitySet="Profissao">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -221,7 +219,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

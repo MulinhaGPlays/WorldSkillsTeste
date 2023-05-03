@@ -2,62 +2,38 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace HotelCetafet.Modelo
 {
     public class PaisDAO
     {
-        bdHotelCetafestConexao conexao;
-        public PaisDAO()
+        private readonly bdHotelCetafestConexao _conexao;
+        public PaisDAO() => _conexao = new bdHotelCetafestConexao();
+
+        public async Task<List<Pais>> getPaises() => await _conexao.Pais.ToListAsync();
+
+        public async Task setCadastrarPais(Pais novoPais)
         {
-             conexao = new bdHotelCetafestConexao();
+            _conexao.Pais.Add(novoPais);
+            await _conexao.SaveChangesAsync();
         }
 
-        public List<Pais> getPaises()
+        public async Task<List<Pais>> getPaisLetraInicial(string iniciais) => await _conexao.Pais.Where(x => x.nome.StartsWith(iniciais)).ToListAsync();
+
+
+        public async Task setAtualizar(Pais pais) {
+
+            _conexao.Entry(pais).State = EntityState.Modified;
+            await _conexao.SaveChangesAsync();
+        }
+
+        public async Task<Pais> getPais(int codigo) => await _conexao.Pais.Where(x => x.codigo == codigo).FirstOrDefaultAsync();
+
+        public async Task setApagar(Pais pais)
         {
-          
-            return conexao.Pais.ToList();
+            _conexao.Pais.Remove(pais);
+            await _conexao.SaveChangesAsync();
         }
-
-        public void x(Pais novoPais)
-        {
-            conexao.Pais.Add(novoPais);
-            conexao.SaveChanges();
-        }
-
-        public List<Pais> getPaisLetraInicial(string iniciais)
-        {
-
-            return conexao.Pais.Where(x => x.nome.StartsWith(iniciais)).ToList();
-        }
-
-
-        public void setAtualizar(Pais pais) {
-           
-            conexao.Entry(pais).State = EntityState.Modified;
-            conexao.SaveChanges();
-
-
-        }
-
-        public Pais getPais(int codigo)
-        {
-            return conexao.Pais.Where(x => x.codigo == codigo).First();
-
-        }
-
-        public void setApagar(Pais pais)
-        {
-           // conexao.Pais.Attach(pais);
-            conexao.Pais.Remove(pais);
-            conexao.SaveChanges();
-
-        }
-
-
     }
-
-   
 }
